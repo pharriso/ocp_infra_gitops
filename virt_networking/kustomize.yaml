@@ -1,0 +1,3 @@
+resources:
+- nad_br0.yaml
+- nnpc_br0.yaml

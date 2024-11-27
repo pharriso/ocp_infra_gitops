@@ -1,0 +1,18 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: external-br0
+spec:
+  desiredState:
+    interfaces:
+      - bridge:
+          options:
+            stp:
+              enabled: false
+          port:
+            - name: ens6
+        name: br0
+        state: up
+        type: linux-bridge
+  nodeSelector:
+    node-role.kubernetes.io/worker: ''
