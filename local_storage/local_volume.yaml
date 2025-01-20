@@ -3,6 +3,9 @@ kind: LocalVolume
 metadata:
   name: local-block
   namespace: openshift-local-storage
+  annotations:
+    argocd.argoproj.io/sync-wave: "6"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   nodeSelector:
     nodeSelectorTerms:
