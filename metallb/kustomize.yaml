@@ -1,0 +1,7 @@
+resources:
+- namespace.yaml
+- operatorgroup.yaml
+- subscription.yaml
+- metallb.yaml
+- ip-pool.yaml
+- l2advert.yaml

@@ -1,0 +1,9 @@
+kind: OperatorGroup
+metadata:
+  name: local-operator-group
+  namespace: openshift-local-storage
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+spec:
+  targetNamespaces:
+    - openshift-local-storage
