@@ -12,14 +12,13 @@ spec:
       minCount: 1
       maxCount: 2
   enableCephTools: true
-  manageNodes: false
   resources:
    mds:
      limits:
        cpu: "3"
        memory: "8Gi"
      requests:
-       cpu: "0.5"
+       cpu: "500m"
        memory: "500Mi"
   monDataDirHostPath: /var/lib/rook
   storageDeviceSets:
@@ -45,5 +44,5 @@ spec:
        cpu: "2"
        memory: "5Gi"
      requests:
-       cpu: "0.5"
+       cpu: "500m"
        memory: "500Mi"
