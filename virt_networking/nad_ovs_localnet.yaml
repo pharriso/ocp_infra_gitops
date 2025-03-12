@@ -1,7 +1,7 @@
 apiVersion: k8s.cni.cncf.io/v1
 kind: NetworkAttachmentDefinition
 metadata:
-  name: localnet2
+  name: vm-network
   namespace: default
 spec:
   config: |-
@@ -10,5 +10,5 @@ spec:
             "name": "localnet2",
             "type": "ovn-k8s-cni-overlay", 
             "topology": "localnet", 
-            "netAttachDefName": "default/localnet2" 
+            "netAttachDefName": "default/vm-network" 
     }

@@ -20,6 +20,6 @@ spec:
         - name: enp8s0 
     ovn:
       bridge-mappings:
-      - localnet: localnet2
+      - localnet: vm-network
         bridge: ovs-br0-ext
         state: present
