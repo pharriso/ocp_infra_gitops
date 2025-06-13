@@ -1,0 +1,25 @@
+apiVersion: fileintegrity.openshift.io/v1alpha1
+kind: FileIntegrity
+metadata:
+  name: worker-fileintegrity
+  namespace: openshift-file-integrity
+  annotations:
+    argocd.argoproj.io/sync-wave: "6"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  nodeSelector: 
+      node-role.kubernetes.io/worker: ""
+  tolerations: 
+  - key: "myNode"
+    operator: "Exists"
+    effect: "NoSchedule"
+  config: 
+    name: "myconfig"
+    namespace: "openshift-file-integrity"
+    key: "config"
+    gracePeriod: 900 
+    maxBackups: 3 
+    initialDelay: 60 
+  debug: false
+status:
+  phase: Active 
