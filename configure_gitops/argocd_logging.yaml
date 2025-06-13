@@ -7,8 +7,8 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    path: nmstate
-    repoURL: https://github.com/pharriso/ocp_logging.git
+    path: ocp_logging
+    repoURL: https://github.com/pharriso/ocp_infra_gitops.git
     targetRevision: HEAD
   sources: []
   project: default
