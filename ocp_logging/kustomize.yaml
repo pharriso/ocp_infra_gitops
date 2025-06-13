@@ -1,0 +1,7 @@
+resources:
+- logging_namespace.yaml
+- logging_operatorgroup.yaml
+- logging_subscription.yaml
+- loki_namespace.yaml
+- loki_operatorgroup.yaml
+- loki_subscription.yaml
