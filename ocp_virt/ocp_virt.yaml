@@ -7,5 +7,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "6"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
+  enableCommonBootImageImport: false
   featureGates:
     enableCommonBootImageImport: false
