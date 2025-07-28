@@ -8,10 +8,16 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   multiCloudGateway:
+    reconcileStrategy: ignore # <- Set this to ignore (disable) or manage (enable) Multicloud Object Gateway
     endpoints:
       minCount: 1
       maxCount: 2
-  enableCephTools: true
+  enableCephTools: false
+  managedResources: 
+    cephFilesystems:
+      reconcileStrategy: manage # <- Set this to ignore (disable) or manage (enable) Ceph Filesystem
+    cephObjectStores:
+      reconcileStrategy: ignore # <- Set this to ignore (disable) or manage (enable) Ceph RGW
   resources:
    mds:
      limits:
