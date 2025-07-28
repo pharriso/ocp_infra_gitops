@@ -4,4 +4,4 @@ metadata:
   name: openshift-storage
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-    openshift.io/node-selector: "node-role.kubernetes.io/worker=''"
+    openshift.io/node-selector: node-role.kubernetes.io/worker=
