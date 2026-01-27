@@ -13,6 +13,9 @@ spec:
       minCount: 1
       maxCount: 2
   managedResources: 
+    cephBlockPools:
+      defaultStorageClass: true
+      defaultVirtualizationStorageClass: true
     cephFilesystems:
       reconcileStrategy: manage # <- Set this to ignore (disable) or manage (enable) Ceph Filesystem
     cephObjectStores:
